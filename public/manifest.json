@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "BuzzRush (Real-Time Team Buzzer)",
+  "short_name": "BuzzRush",
+  "description": "High-performance real-time esports buzzer app to identify who buzzed first with millisecond precision.",
+  "theme_color": "#090d16",
+  "background_color": "#070b14",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
