@@ -565,7 +565,15 @@ async function startServer() {
   // Vite Middleware for development vs Static serving for production
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: {
+        middlewareMode: true,
+        // Attach Vite's HMR WebSocket to the existing HTTP server so it shares
+        // the same (proxied) port instead of opening a separate one that the
+        // preview proxy can't reach. Socket.IO coexists on the same server
+        // because Vite's HMR upgrades use the "vite-hmr" subprotocol while
+        // Socket.IO handles its own "/socket.io/" path.
+        hmr: { server },
+      },
       appType: 'spa',
     });
     app.use(vite.middlewares);
