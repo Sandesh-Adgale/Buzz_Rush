@@ -1,0 +1,6 @@
+{
+  "name": "BuzzRush (Real-Time Team Buzzer)",
+  "description": "High-performance real-time esports buzzer app to identify who buzzed first with millisecond precision, live admin dashboard, and round history.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
